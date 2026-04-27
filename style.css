@@ -1,0 +1,303 @@
+/* ========================================
+   VARIÁVEIS GLOBAIS (Tema do site)
+======================================== */
+
+:root {
+
+  /* Cor principal do site */
+  --bs-primary: #3f2e6d;
+
+  /* Fundo geral */
+  --bs-body-bg: #f8f9fa;
+
+  /* Cor do texto */
+  --bs-body-color: #212529;
+
+  /* Fonte principal */
+  --bs-font-sans-serif: 'Inter', system-ui, sans-serif;
+
+  /* Bordas arredondadas */
+  --bs-border-radius: 0.75rem;
+
+}
+
+
+/* ========================================
+   CONFIGURAÇÃO GLOBAL
+======================================== */
+
+body {
+
+  font-family: var(--bs-font-sans-serif);
+
+  background-color: var(--bs-body-bg);
+
+  color: var(--bs-body-color);
+
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+}
+
+.navbar-brand {
+
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+
+}
+
+
+/* ========================================
+   HERO SECTION (Topo da HOME)
+======================================== */
+
+.hero {
+
+  padding-top: 80px;
+
+  padding-bottom: 80px;
+
+}
+
+.hero h1 {
+
+  font-weight: 700;
+
+}
+
+.hero p {
+
+  font-size: 1.1rem;
+
+  color: #6c757d;
+
+}
+
+
+/* ========================================
+   SEÇÕES GERAIS
+======================================== */
+
+section {
+
+  padding-top: 60px;
+
+  padding-bottom: 60px;
+
+}
+
+
+/* ========================================
+   CARDS (Tecnologias e Projetos)
+======================================== */
+
+.card {
+
+  border: none;
+
+  border-radius: 1rem;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+  transition: transform 0.2s, box-shadow 0.2s;
+
+}
+
+
+/* Efeito ao passar o mouse */
+
+.card:hover {
+
+  transform: translateY(-6px);
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+
+}
+
+
+/* Ícones dentro dos cards */
+
+.card i {
+
+  color: var(--bs-primary);
+
+}
+
+
+/* ========================================
+   BADGES (caso ainda use)
+======================================== */
+
+.badge {
+
+  font-weight: 500;
+
+  padding: 0.6rem 0.8rem;
+
+}
+
+
+/* ========================================
+   BOTÕES
+======================================== */
+
+.btn {
+
+  border-radius: 0.6rem;
+
+  padding: 0.6rem 1.2rem;
+
+  font-weight: 500;
+
+}
+
+
+/* Efeito hover */
+
+.btn-primary:hover {
+
+  transform: scale(1.03);
+
+}
+
+
+/* ========================================
+   LINKS
+======================================== */
+
+a {
+
+  text-decoration: none;
+
+}
+
+a:hover {
+
+  text-decoration: underline;
+
+}
+
+
+/* ========================================
+   SEÇÃO TECNOLOGIAS
+======================================== */
+
+.tech-card {
+
+  padding: 20px;
+
+}
+
+.tech-card i {
+
+  font-size: 2.5rem;
+
+}
+
+
+/* ========================================
+   SEÇÃO PROJETOS
+======================================== */
+
+.project-card img {
+
+  border-radius: 1rem 1rem 0 0;
+
+  object-fit: cover;
+
+  height: 180px;
+
+}
+
+
+/* ========================================
+   SEÇÃO SOBRE
+======================================== */
+
+.about-text {
+
+  font-size: 1.05rem;
+
+  line-height: 1.7;
+
+  color: #495057;
+
+}
+
+
+/* ========================================
+   CONTATO
+======================================== */
+
+.contact-icons i {
+
+  font-size: 1.8rem;
+
+  margin: 10px;
+
+  color: var(--bs-primary);
+
+  transition: transform 0.2s;
+
+}
+
+.contact-icons i:hover {
+
+  transform: scale(1.2);
+
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+
+  background-color: #1e6aa3;
+
+  color: white;
+
+  padding: 30px 0;
+
+}
+
+footer p {
+
+  margin: 0;
+
+  font-size: 0.9rem;
+
+}
+
+
+/* ========================================
+   RESPONSIVIDADE EXTRA
+======================================== */
+
+@media (max-width: 768px) {
+
+  .hero {
+
+    padding-top: 50px;
+
+    padding-bottom: 50px;
+
+  }
+
+  .hero h1 {
+
+    font-size: 1.8rem;
+
+  }
+
+}

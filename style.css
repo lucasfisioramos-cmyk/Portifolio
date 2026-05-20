@@ -36,18 +36,31 @@ body {
 }
 
 .navbar-brand {
-  color:aqua
+  color:rgb(249, 250, 250);
   font-weight: 600;
   letter-spacing: 0.5px;
 
 
 }
+.nav-link {
+  color: white;
+}
 
-/*.hero {
+/* Muda a cor da borda e das barrinhas */
+.navbar-toggler {
+    border-color: white; 
+}
 
-  padding-top: 80px;
+/* Muda especificamente a cor do ícone (as barrinhas) 
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 255, 127, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3e%3c/svg%3e");
+}*/ 
 
-  padding-bottom: 80px;
+.hero {
+
+  padding-top: 20px;
+
+  padding-bottom: 20px;
 
 }
 
@@ -64,12 +77,12 @@ body {
   color: #6c757d;
 
 }
-*/
+
 section {
 
-  padding-top: 60px;
+  padding-top: 20px;
 
-  padding-bottom: 60px;
+  padding-bottom: 20px;
 
 }
 
@@ -114,7 +127,9 @@ section {
 }
 
 .btn {
+  background-color: var(--bs-primary);
 
+  border:0;
   border-radius: 0.6rem;
 
   padding: 0.6rem 1.2rem;
@@ -143,7 +158,7 @@ a:hover {
 
 .tech-card {
 
-  padding: 20px;
+  padding: 5px;
 
 }
 
@@ -193,7 +208,7 @@ a:hover {
 
 footer {
 
-  background-color: #1e6aa3;
+  background-color: var(--bs-primary);
 
   color: white;
 

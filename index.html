@@ -14,7 +14,7 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg navbar-dark bg--bs-primary">
       <div class="container">
         <a class="navbar-brand" href="#"> LucasDev </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -34,8 +34,14 @@
 
   <!-- APRESENTAÇÃO -->
 
-  <section class="container mt-5">
+  <main class="container mt-5">
+    <section>
     <div class="row align-items-center">
+      <!-- Espaço para foto futura -->
+
+      <div class="col-md-4 text-center">
+        <img src="images/foto-perfil.png" alt="Foto de perfil" class="img-fluid rounded-circle" width="200">
+      </div>
 
   <!-- Texto -->
 
@@ -43,16 +49,10 @@
         <h1> Lucas — Desenvolvedor Full Stack em Formação </h1>
         <p class="lead mt-3">
           Desenvolvedor em formação com experiência prévia na área da saúde, atuando por 10 anos com análise estruturada
-          de dados clínicos,
-          tomada de decisão baseada em evidência científica e organizaçãosistemática de informa
+          de dados clínicos, tomada de decisão baseada em evidência científica e organização sistemática de informações.
         </p>
         <a href="projetos.html" class="btn btn-primary mt-3"> Ver Projetos </a>
-      </div>
-
-  <!-- Espaço para foto futura -->
-
-      <div class="col-md-4 text-center">
-        <img src="images/foto-perfil.png" alt="Foto de perfil" class="img-fluid rounded-circle" width="200">
+        <a href="projetos.html" class="btn btn-primary mt-3"> Currículo </a>
       </div>
     </div>
   </section>
@@ -64,7 +64,7 @@
     <h2 class="text-center mb-4"> Tecnologias </h2>
     <div class="row text-center">
       <!-- Python -->
-      <div class="col-md-3 col-6 mb-4">
+      <div class="col-md-1 col-12 mb-4">
         <div class="card h-100">
           <div class="card-body">
             <i class="bi bi-filetype-py fs-1 mb-2"></i>
@@ -75,7 +75,7 @@
         </div>
       </div>
   <!-- Flask -->
-      <div class="col-md-3 col-6 mb-4">
+      <div class="col-md-1 col-12 mb-4">
         <div class="card h-100">
           <div class="card-body">
             <i class="bi bi-droplet fs-1 mb-2"></i>
@@ -86,57 +86,47 @@
         </div>
       </div>
   <!-- HTML -->
-      <div class="col-md-3 col-6 mb-4">
+      <div class="col-md-1 col-12 mb-4">
         <div class="card h-100">
           <div class="card-body">
             <i class="bi bi-filetype-html fs-1 mb-2"></i>
-            <h6 class="card-title mb-0">
-              HTML
-            </h6>
+            <h6 class="card-title mb-0"> HTML </h6>
           </div>
         </div>
       </div>
   <!-- CSS -->
-      <div class="col-md-3 col-6 mb-4">
+      <div class="col-md-1 col-12 mb-4">
         <div class="card h-100">
           <div class="card-body">
             <i class="bi bi-filetype-css fs-1 mb-2"></i>
-            <h6 class="card-title mb-0">
-              CSS
-            </h6>
+            <h6 class="card-title mb-0"> CSS </h6>
           </div>
         </div>
       </div>
   <!-- Bootstrap -->
-      <div class="col-md-3 col-6 mb-4">
+      <div class="col-md-1 col-12 mb-4">
         <div class="card h-100">
           <div class="card-body">
             <i class="bi bi-bootstrap fs-1 mb-2"></i>
-            <h6 class="card-title mb-0">
-              Bootstrap
-            </h6>
+            <h6 class="card-title mb-0"> Bootstrap </h6>
           </div>
         </div>
       </div>
   <!-- MySQL -->
-      <div class="col-md-3 col-6 mb-4">
+      <div class="col-md-1 col-12 mb-4">
         <div class="card h-100">
           <div class="card-body">
             <i class="bi bi-database fs-1 mb-2"></i>
-            <h6 class="card-title mb-0">
-              MySQL
-            </h6>
+            <h6 class="card-title mb-0"> MySQL </h6>
           </div>
         </div>
       </div>
   <!-- Git -->
-      <div class="col-md-3 col-6 mb-4">
+      <div class="col-md-1 col-12 mb-4">
         <div class="card h-100">
           <div class="card-body">
             <i class="bi bi-git fs-1 mb-2"></i>
-            <h6 class="card-title mb-0">
-              Git
-            </h6>
+            <h6 class="card-title mb-0"> Git </h6>
           </div>
         </div>
       </div>
@@ -145,8 +135,9 @@
 
   <!-- PROJETOS -->
   <section class="container mt-5">
-    <h2 class="text-center mb-4"> Projetos em Destaque</h2>
-    <div class="col-md-4 mb-4">
+    <div class="row text-center">
+      <h2 class="text-center mb-4"> Projetos em Destaque</h2>
+    <div class="col-md-3 mb-4">
       <div class="card h-100">
         <img src="images/projeto1.png" class="card-img-top" alt="Projeto 1">
         <div class="card-body">
@@ -162,7 +153,7 @@
       </div>
     </div>
   <!--Projeto 2-->
-    <div class="col-md-4 mb-4">
+    <div class="col-md-3 mb-4">
       <div class="card h-100">
         <img src="images/projeto2.png" class="card-img-top" alt="Projeto 2">
         <div class="card-body">
@@ -178,7 +169,7 @@
       </div>
     </div>
   <!-- Projeto 3 -->
-    <div class="col-md-4 mb-4">
+    <div class="col-md-3 mb-4">
       <div class="card h-100">
         <img src="images/projeto3.png" class="card-img-top" alt="Projeto 3">
         <div class="card-body">
@@ -193,8 +184,11 @@
       </div>
     </div>
     </div>
+    </div>
   </section>
-  <footer class="bg-dark text-white text-center p-4 mt-5">
+  </main>
+
+  <footer class="text-white text-center p-4 mt-5">
     <p class="mb-1"> © 2026 — Lucas Dev </p>
     <p><i class="bi bi-github"></i>
        <i class="bi bi-linkedin"></i>

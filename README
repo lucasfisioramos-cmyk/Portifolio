@@ -1,1 +1,150 @@
-# Portfólio profissional
+# Lucas DEV - Portfólio Pessoal
+
+Portfólio pessoal desenvolvido com foco acadêmico e profissional, reunindo projetos, estudos e experiências durante minha transição de carreira da área da saúde para o desenvolvimento de software.
+
+O objetivo deste projeto é centralizar aplicações, experimentos e soluções desenvolvidas ao longo da formação em desenvolvimento web, além de documentar minha evolução técnica e profissional.
+
+---
+
+## Sobre o Projeto
+
+Este portfólio foi desenvolvido para apresentar:
+
+- Minha trajetória profissional
+- Projetos acadêmicos e pessoais
+- Estudos em desenvolvimento web
+- Tecnologias e ferramentas utilizadas
+- Evolução técnica durante a transição de carreira
+
+Além da parte visual, o projeto também funciona como ambiente de prática para organização de código, estruturação de aplicações web e boas práticas de desenvolvimento.
+
+---
+
+## Tecnologias Utilizadas
+
+### Front-end
+- HTML5
+- CSS3
+- Bootstrap 5
+
+### Back-end
+- Python
+- Flask
+
+### Ferramentas
+- Git
+- GitHub
+- VS Code
+
+---
+
+## Funcionalidades
+
+- Página de apresentação profissional
+- Sessão de trajetória e experiências
+- Exibição de projetos
+- Layout responsivo
+- Estrutura modular para futuras implementações
+
+---
+
+## Projetos em Destaque
+
+Em desenvolvimento.
+
+Futuramente este portfólio contará com projetos como:
+
+- Sistema de gestão de pacientes
+- Aplicações Flask
+- APIs REST
+- Dashboards e sistemas web
+- Projetos acadêmicos
+- Ferramentas voltadas à organização e produtividade
+
+---
+
+## Estrutura do Projeto
+- em construção 
+
+## Objetivos de Aprendizado
+
+Este projeto faz parte do meu processo de desenvolvimento nas áreas de:
+
+- Desenvolvimento web
+- Estruturação de aplicações Flask
+- Versionamento com Git/GitHub
+- UI/UX básico
+- Organização de projetos
+- Clean Code
+- Boas práticas de desenvolvimento
+
+---
+
+## Sobre Mim
+
+Sou fisioterapeuta formado desde 2015, com atuação em reabilitação, dor crônica e atendimento clínico. Em 2026 iniciei oficialmente minha transição para a área de tecnologia, unindo experiência prática em resolução de problemas com desenvolvimento de software.
+
+---
+
+## Como Executar o Projeto
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
+```
+
+Acesse a pasta do projeto:
+
+```bash
+cd nome-do-repositorio
+```
+
+Crie um ambiente virtual:
+
+```bash
+python -m venv venv
+```
+
+Ative o ambiente virtual:
+
+### Windows
+```bash
+venv\Scripts\activate
+```
+
+### Linux/macOS
+```bash
+source venv/bin/activate
+```
+
+Instale as dependências:
+
+```bash
+pip install -r requirements.txt
+```
+
+Execute o projeto:
+
+```bash
+flask run
+```
+
+---
+
+## Status do Projeto
+
+🚧 Em desenvolvimento
+
+---
+
+## Contato
+
+- LinkedIn: Em construção
+- GitHub: Em construção
+
+---
+
+## Licença
+
+Projeto desenvolvido para fins acadêmicos, educacionais e de portfólio pessoal.

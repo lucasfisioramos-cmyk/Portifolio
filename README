@@ -1,8 +1,11 @@
 # Lucas DEV - Portfólio Pessoal
 
-Portfólio pessoal desenvolvido com foco acadêmico e profissional, reunindo projetos, estudos e experiências durante minha transição de carreira da área da saúde para o desenvolvimento de software.
+Portfólio pessoal desenvolvido com foco acadêmico e profissional, reunindo projetos, estudos e experiências durante durante o primeiro 
+periodo do curso de Desenvolvimento de Software Multiplataforma, documentando tambem, minha transição de carreira da área da saúde para 
+o desenvolvimento de software.
 
-O objetivo deste projeto é centralizar aplicações, experimentos e soluções desenvolvidas ao longo da formação em desenvolvimento web, além de documentar minha evolução técnica e profissional.
+Este projeto conta com todas as aplicações, experimentos e soluções desenvolvidas ao longo da formação em desenvolvimento web, 
+além de documentar minha evolução técnica e profissional.
 
 ---
 
@@ -16,11 +19,12 @@ Este portfólio foi desenvolvido para apresentar:
 - Tecnologias e ferramentas utilizadas
 - Evolução técnica durante a transição de carreira
 
-Além da parte visual, o projeto também funciona como ambiente de prática para organização de código, estruturação de aplicações web e boas práticas de desenvolvimento.
+Além da parte visual, o projeto também funciona como ambiente de prática para organização de código, estruturação de aplicações web e 
+boas práticas de desenvolvimento.
 
 ---
 
-## Tecnologias Utilizadas
+## Tecnologias Utilizadas nesta etapa:
 
 ### Front-end
 - HTML5
@@ -35,6 +39,8 @@ Além da parte visual, o projeto também funciona como ambiente de prática para
 - Git
 - GitHub
 - VS Code
+- AWS - EC2
+- Docker
 
 ---
 
@@ -42,7 +48,9 @@ Além da parte visual, o projeto também funciona como ambiente de prática para
 
 - Página de apresentação profissional
 - Sessão de trajetória e experiências
+- Currículo
 - Exibição de projetos
+- Participação em eventos
 - Layout responsivo
 - Estrutura modular para futuras implementações
 
@@ -50,12 +58,12 @@ Além da parte visual, o projeto também funciona como ambiente de prática para
 
 ## Projetos em Destaque
 
-Em desenvolvimento.
+- [API - Aprendizado por Projeto Integrado fATEC](https://github.com/eugeniojonatas/Radar-Cidadao-Froggrammers)
+- [software de gestão de pacientes](https://github.com/lucasfisioramos-cmyk/fisiocontrol)
+
 
 Futuramente este portfólio contará com projetos como:
 
-- Sistema de gestão de pacientes
-- Aplicações Flask
 - APIs REST
 - Dashboards e sistemas web
 - Projetos acadêmicos
@@ -82,7 +90,7 @@ Este projeto faz parte do meu processo de desenvolvimento nas áreas de:
 
 ## Sobre Mim
 
-Sou fisioterapeuta formado desde 2015, com atuação em reabilitação, dor crônica e atendimento clínico. Em 2026 iniciei oficialmente minha transição para a área de tecnologia, unindo experiência prática em resolução de problemas com desenvolvimento de software.
+Sou fisioterapeuta formado desde 2016, com atuação em reabilitação, dor crônica e atendimento clínico. Em 2026 iniciei oficialmente minha transição para a área de tecnologia, unindo experiência prática em resolução de problemas com desenvolvimento de software.
 
 ---
 

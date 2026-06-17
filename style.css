@@ -1,244 +1,193 @@
-:root {
-
-  /* Cor principal do site */
-  --bs-primary: #3f2e6d;
-
-  --bs-secundary: blue; 
-
-  --bs-body-bg: #f8f9fa;
-
-  /* Cor do texto */
-  --bs-body-color: #212529;
-
-  /* Fonte principal */
-  --bs-font-sans-serif: 'Inter', system-ui, sans-serif;
-
-  /* Bordas arredondadas */
-  --bs-border-radius: 0.75rem;
-
-}
-
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E RESET
+   ========================================================================== */
 body {
-
-  font-family: var(--bs-font-sans-serif);
-
-  background-color: var(--bs-body-bg);
-
-  color: var(--bs-body-color);
-
+    background-color: #f8f9fa;
+    color: #333333;
+    padding-top: 85px; /* Evita que o menu fixo cubra o topo do conteúdo */
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-.navbar {
-
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  background-color: var(--bs-primary);
-
+/* ==========================================================================
+   2. NAVBAR COMPLETA (EFEITO VIDRO / GLASSMORPHISM)
+   ========================================================================== */
+.custom-navbar {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px); /* Efeito moderno de desfoque de fundo */
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
 }
 
-.navbar-brand {
-  color:rgb(249, 250, 250);
-  font-weight: 600;
-  letter-spacing: 0.5px;
-
-
-}
-.nav-link {
-  color: white;
+.custom-link {
+    font-weight: 500;
+    color: #555555 !important;
+    padding: 6px 15px !important;
+    border-radius: 20px;
+    transition: all 0.2s ease;
 }
 
-/* Muda a cor da borda e das barrinhas */
-.navbar-toggler {
-    border-color: white; 
+.custom-link:hover, 
+.custom-link.active {
+    color: #0d6efd !important;
+    background-color: rgba(13, 110, 253, 0.05);
 }
 
-/* Muda especificamente a cor do ícone (as barrinhas) 
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 255, 127, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3e%3c/svg%3e");
-}*/ 
-
-.hero {
-
-  padding-top: 20px;
-
-  padding-bottom: 20px;
-
+/* ==========================================================================
+   3. SEÇÕES PRINCIPAIS E CARDS GERAIS
+   ========================================================================== */
+/* Box principal usado na Home e no Detalhe do Projeto */
+.hero-section,
+.profile-section,
+.about-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    padding: 3rem;
 }
 
-.hero h1 {
-
-  font-weight: 700;
-
+/* Foto de Perfil na Home */
+.profile-img {
+    border: 5px solid #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.hero p {
-
-  font-size: 1.1rem;
-
-  color: #6c757d;
-
+/* Cards interativos da seção de Projetos */
+.custom-card {
+    background: #ffffff;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-section {
-
-  padding-top: 20px;
-
-  padding-bottom: 20px;
-
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
-.card {
-
-  border: none;
-
-  border-radius: 1rem;
-
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-
-  transition: transform 0.2s, box-shadow 0.2s;
-
+/* ==========================================================================
+   4. CARROSSEL DE IMAGENS (PÁGINA DOS PROJETOS)
+   ========================================================================== */
+.carousel {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-
-/* Efeito ao passar o mouse */
-
-.card:hover {
-
-  transform: translateY(-6px);
-
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-
+.carousel-item img {
+    height: 450px;
+    object-fit: contain; /* Enquadra a tela do sistema sem cortar as bordas */
+    margin: 0 auto;
+    background-color: #1a1a1a;
 }
 
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 8px;
+    padding: 15px;
+    bottom: 20px;
+}
+.project-card-sticky {
+            position: sticky;
+            top: 50px; /* Alinha o topo do card logo abaixo do Navbar fixo */
+            margin-bottom: 5rem; /* Espaço para o próximo card deslizar antes de cobrir */
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+            padding: 3rem;
+            transition: box-shadow 0.3s ease;
+        }
+        
+        /* Adiciona uma sombra mais forte no card de cima conforme ele é sobreposto */
+.project-card-sticky:hover {
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+        }
 
-/* Ícones dentro dos cards */
-
-.card i {
-
-  color: var(--bs-primary);
-
+/* ==========================================================================
+   5. COMPONENTES TECNOLÓGICOS (BADGES & SKILL BOXES)
+   ========================================================================== */
+/* Etiquetas de tecnologia arredondadas */
+.tech-badge {
+    background-color: #eff2f6;
+    color: #4f5d75;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 6px;
+    font-size: 0.95rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
 }
 
-.badge {
-
-  font-weight: 500;
-
-  padding: 0.6rem 0.8rem;
-
+.tech-badge:hover {
+    background-color: #0d6efd;
+    color: #ffffff;
+    transform: scale(1.05);
 }
 
-.btn {
-  background-color: var(--bs-primary);
-
-  border:0;
-  border-radius: 0.6rem;
-
-  padding: 0.6rem 1.2rem;
-
-  font-weight: 500;
-
+/* Blocos de competências na página Sobre Mim */
+.skill-box {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid #e9ecef;
+    height: 100%;
+    transition: transform 0.3s ease;
 }
 
-.btn-primary:hover {
-
-  transform: scale(1.03);
-
+.skill-box:hover {
+    transform: translateY(-3px);
 }
 
-a {
-
-  text-decoration: none;
-
+/* Linha do Tempo (Timeline) na página Sobre Mim */
+.timeline-item {
+    border-left: 3px solid #0d6efd;
+    padding-left: 20px;
+    position: relative;
 }
 
-a:hover {
-
-  text-decoration: underline;
-
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #0d6efd;
+    border-radius: 50%;
+    left: -7px;
+    top: 6px;
 }
 
-.tech-card {
-
-  padding: 5px;
-
+/* ==========================================================================
+   6. FOOTER COMPLETO (RODAPÉ)
+   ========================================================================== */
+.custom-footer {
+    background-color: #ffffff;
 }
 
-.tech-card i {
-
-  font-size: 2.5rem;
-
+/* Círculos das redes sociais no rodapé */
+.footer-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #f1f3f5;
+    color: #495057;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
 }
 
-.project-card img {
-
-  border-radius: 1rem 1rem 0 0;
-
-  object-fit: cover;
-
-  height: 180px;
-
-}
-
-.about-text {
-
-  font-size: 1.05rem;
-
-  line-height: 1.7;
-
-  color: #495057;
-
-}
-
-.contact-icons i {
-
-  font-size: 1.8rem;
-
-  margin: 10px;
-
-  color: var(--bs-primary);
-
-  transition: transform 0.2s;
-
-}
-
-.contact-icons i:hover {
-
-  transform: scale(1.2);
-
-}
-
-footer {
-
-  background-color: var(--bs-primary);
-
-  color: white;
-
-  padding: 30px 0;
-
-}
-
-footer p {
-
-  margin: 0;
-
-  font-size: 0.9rem;
-
-}
-
-
-@media (max-width: 768px) {
-
-  .hero {
-
-    padding-top: 50px;
-
-    padding-bottom: 50px;
-
-  }
-
-  .hero h1 {
-
-    font-size: 1.8rem;
-
-  }
-
+.footer-icon:hover {
+    background-color: #0d6efd;
+    color: #ffffff;
+    transform: translateY(-2px);
 }

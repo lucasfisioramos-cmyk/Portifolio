@@ -1,0 +1,193 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E RESET
+   ========================================================================== */
+body {
+    background-color: #f8f9fa;
+    color: #333333;
+    padding-top: 85px; /* Evita que o menu fixo cubra o topo do conteúdo */
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* ==========================================================================
+   2. NAVBAR COMPLETA (EFEITO VIDRO / GLASSMORPHISM)
+   ========================================================================== */
+.custom-navbar {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px); /* Efeito moderno de desfoque de fundo */
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.custom-link {
+    font-weight: 500;
+    color: #555555 !important;
+    padding: 6px 15px !important;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.custom-link:hover, 
+.custom-link.active {
+    color: #0d6efd !important;
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+/* ==========================================================================
+   3. SEÇÕES PRINCIPAIS E CARDS GERAIS
+   ========================================================================== */
+/* Box principal usado na Home e no Detalhe do Projeto */
+.hero-section,
+.profile-section,
+.about-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    padding: 3rem;
+}
+
+/* Foto de Perfil na Home */
+.profile-img {
+    border: 5px solid #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Cards interativos da seção de Projetos */
+.custom-card {
+    background: #ffffff;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================================================
+   4. CARROSSEL DE IMAGENS (PÁGINA DOS PROJETOS)
+   ========================================================================== */
+.carousel {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-item img {
+    height: 450px;
+    object-fit: contain; /* Enquadra a tela do sistema sem cortar as bordas */
+    margin: 0 auto;
+    background-color: #1a1a1a;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 8px;
+    padding: 15px;
+    bottom: 20px;
+}
+.project-card-sticky {
+    position: relative;
+    top: auto;
+    scroll-margin-top: 110px;
+    margin-bottom: 5rem;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+    padding: 3rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.project-card-sticky:hover {
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   5. COMPONENTES TECNOLÓGICOS (BADGES & SKILL BOXES)
+   ========================================================================== */
+/* Etiquetas de tecnologia arredondadas */
+.tech-badge {
+    background-color: #eff2f6;
+    color: #4f5d75;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 6px;
+    font-size: 0.95rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+    background-color: #0d6efd;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* Blocos de competências na página Sobre Mim */
+.skill-box {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid #e9ecef;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.skill-box:hover {
+    transform: translateY(-3px);
+}
+
+/* Linha do Tempo (Timeline) na página Sobre Mim */
+.timeline-item {
+    border-left: 3px solid #0d6efd;
+    padding-left: 20px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #0d6efd;
+    border-radius: 50%;
+    left: -7px;
+    top: 6px;
+}
+
+/* ==========================================================================
+   6. FOOTER COMPLETO (RODAPÉ)
+   ========================================================================== */
+.custom-footer {
+    background-color: #ffffff;
+}
+
+/* Círculos das redes sociais no rodapé */
+.footer-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #f1f3f5;
+    color: #495057;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.footer-icon:hover {
+    background-color: #0d6efd;
+    color: #ffffff;
+    transform: translateY(-2px);
+}

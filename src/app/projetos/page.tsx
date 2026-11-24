@@ -1,131 +1,122 @@
-import Carousel from '@/components/Carousel'
-import { fisiocontrolSlides, fisiocontrolTechs, radarTechs } from '@/lib/data'
+import Link from 'next/link'
+import ProjectCard from '@/components/ProjectCard'
+import { academicProjects, personalProjects, professionalStatus } from '@/lib/data'
 
 export const metadata = {
-  title: 'Projetos | Lucas Dev',
+  title: 'Projetos | Lucas Lemes Ramos',
+  description:
+    'Projetos acadêmicos (API e disciplinas), status de atuação profissional e projetos pessoais de Lucas Lemes Ramos.',
 }
 
 export default function Projetos() {
   return (
     <main className="container my-5">
-      {/* ── Case 01: Fisiocontrol ── */}
-      <section id="fisiocontrol" className="project-card-sticky">
-        <div className="mb-5">
-          <span className="badge badge-primary mb-2">Portfólio / Case 01</span>
-          <h1 className="display-5 fw-bold text-dark" style={{ marginTop: '0.5rem' }}>
-            Sistema de Gestão Clínica
-          </h1>
-          <p className="lead text-muted">
-            Sistema web desenvolvido com foco em UI/UX e metodologia Scrum.
+      {/* Cabeçalho da página */}
+      <section className="about-card mb-5">
+        <span className="badge badge-primary mb-2">Portfólio de Projetos</span>
+        <h1 className="display-5 fw-bold text-dark" style={{ marginTop: '0.5rem' }}>
+          Projetos Desenvolvidos
+        </h1>
+        <p className="lead text-muted mb-4">
+          Organização por categorias conforme roteiro acadêmico da FATEC SJC: projetos acadêmicos
+          (API e disciplinas), trajetória profissional e projetos pessoais.
+        </p>
+
+        <div className="d-flex flex-wrap gap-2">
+          <a href="#academicos" className="btn btn-outline-primary btn-sm">
+            <i className="bi bi-mortarboard" />
+            Projetos Acadêmicos ({academicProjects.length})
+          </a>
+          <a href="#profissionais" className="btn btn-outline-secondary btn-sm">
+            <i className="bi bi-briefcase" />
+            Projetos Profissionais
+          </a>
+          <a href="#pessoais" className="btn btn-outline-dark btn-sm">
+            <i className="bi bi-code-square" />
+            Projetos Pessoais ({personalProjects.length})
+          </a>
+        </div>
+      </section>
+
+      {/* 1. Projetos Acadêmicos (API e Disciplinas) */}
+      <section id="academicos" className="mb-5 section-anchor">
+        <div className="mb-4">
+          <h2 className="fw-bold text-dark" style={{ marginTop: '0.4rem' }}>
+            <i className="bi bi-mortarboard me-2 text-primary" />
+            Projetos Acadêmicos (API e Disciplinas)
+          </h2>
+          <p className="text-muted small">
+            Projetos de Aprendizagem por Projetos Integrados (API) em parceria e avaliações técnicas
+            das disciplinas do curso de DSM — FATEC São José dos Campos.
           </p>
         </div>
 
-        <div className="row">
-          <div className="col">
-            <Carousel slides={fisiocontrolSlides} />
+        <div className="cards-grid-3">
+          {academicProjects.map((project) => (
+            <ProjectCard
+              key={project.slug}
+              project={project}
+              detailLabel="Ver Detalhes Técnicos"
+              codeLabel="GitHub"
+              maxStackItems={5}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* 2. Projetos Profissionais */}
+      <section id="profissionais" className="mb-5 section-anchor">
+        <div className="mb-4">
+          <h2 className="fw-bold text-dark" style={{ marginTop: '0.4rem' }}>
+            <i className="bi bi-briefcase me-2 text-primary" />
+            Projetos Profissionais
+          </h2>
+        </div>
+
+        <div className="contact-card">
+          <div className="mb-3">
+            <span className="badge badge-primary">{professionalStatus.badge}</span>
           </div>
+          <h3 className="h4 fw-bold text-dark mb-2">{professionalStatus.title}</h3>
+          <p className="text-secondary mb-3">{professionalStatus.summary}</p>
+          <p className="text-secondary mb-4">{professionalStatus.goal}</p>
 
-          <div className="col" style={{ maxWidth: '420px' }}>
-            <article>
-              <div className="mb-4">
-                <h3 className="h4 fw-bold text-dark mb-2">Objetivo do Projeto</h3>
-                <p className="text-muted">
-                  Gerenciar de forma integrada e otimizada pacientes, consultas e o acompanhamento clínico completo.
-                </p>
-              </div>
-
-              <hr className="divider" />
-
-              <div className="mb-4">
-                <h3 className="h5 fw-bold text-dark mb-3">Funcionalidades Chave</h3>
-                <div className="feature-grid">
-                  {['📁 Cadastro de Pacientes', '📅 Agenda Integrada', '📑 Histórico Clínico', '💰 Controle Financeiro'].map((f) => (
-                    <div key={f} className="feature-item">{f}</div>
-                  ))}
-                </div>
-              </div>
-
-              <hr className="divider" />
-
-              <div className="mb-4">
-                <h3 className="h5 fw-bold text-dark mb-2">Etapas de Design & Desenvolvimento</h3>
-                <p className="small text-muted mb-0">
-                  <span className="fw-semibold text-dark">Fluxo:</span> Wireframes ➔ Mockups ➔ Protótipo ➔ MVP
-                </p>
-              </div>
-
-              <hr className="divider" />
-
-              <div>
-                <h3 className="h5 fw-bold text-dark mb-3">Tecnologias & Ferramentas</h3>
-                <div className="tech-badges-wrap">
-                  {fisiocontrolTechs.map((t) => (
-                    <span key={t} className="tech-badge">{t}</span>
-                  ))}
-                </div>
-              </div>
-            </article>
+          <div className="d-flex flex-wrap gap-2">
+            <Link href="/contato" className="btn btn-primary btn-sm">
+              <i className="bi bi-envelope" />
+              Entrar em Contato
+            </Link>
+            <Link href="/sobre" className="btn btn-outline-primary btn-sm">
+              <i className="bi bi-person-vcard" />
+              Ver Trajetória Completa
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* ── Case 02: Radar Cidadão ── */}
-      <section id="radar-cidadao" className="project-card-sticky">
-        <div className="mb-5">
-          <span className="badge badge-success mb-2">Portfólio / Case 02</span>
-          <h1 className="display-5 fw-bold text-dark" style={{ marginTop: '0.5rem' }}>
-            Radar Cidadão
-          </h1>
-          <p className="lead text-muted">
-            Análise de dados públicos e transparência parlamentar.
+      {/* 3. Projetos Pessoais */}
+      <section id="pessoais" className="section-anchor">
+        <div className="mb-4">
+          <h2 className="fw-bold text-dark" style={{ marginTop: '0.4rem' }}>
+            <i className="bi bi-code-square me-2 text-primary" />
+            Projetos Pessoais
+          </h2>
+          <p className="text-muted small">
+            Soluções próprias unindo experiência clínica prévia em saúde e engenharia de software
+            full-stack.
           </p>
         </div>
 
-        <div className="row">
-          <div className="col">
-            <div className="video-wrapper">
-              <iframe
-                src="https://www.youtube.com/embed/3TDcRBkeUlo?si=WjBzX_Ykfc4RThyi"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              />
-            </div>
-          </div>
-
-          <div className="col" style={{ maxWidth: '420px' }}>
-            <article>
-              <div className="mb-4">
-                <h3 className="h4 fw-bold text-dark mb-2">Objetivo do Projeto</h3>
-                <p className="text-muted">
-                  Coletar, processar e apresentar dados públicos sobre deputados de forma clara e acessível à população.
-                </p>
-              </div>
-
-              <hr className="divider" />
-
-              <div className="mb-4">
-                <h3 className="h5 fw-bold text-dark mb-3">Funcionalidades Chave</h3>
-                <div className="feature-grid">
-                  {['📊 Gráficos de Gastos', '📅 Presença em Sessões', '📑 Projetos de Lei', '🤖 Web Scraping / API'].map((f) => (
-                    <div key={f} className="feature-item">{f}</div>
-                  ))}
-                </div>
-              </div>
-
-              <hr className="divider" />
-
-              <div>
-                <h3 className="h5 fw-bold text-dark mb-3">Tecnologias & Ferramentas</h3>
-                <div className="tech-badges-wrap">
-                  {radarTechs.map((t) => (
-                    <span key={t} className="tech-badge">{t}</span>
-                  ))}
-                </div>
-              </div>
-            </article>
-          </div>
+        <div className="cards-grid-3">
+          {personalProjects.map((project) => (
+            <ProjectCard
+              key={project.slug}
+              project={project}
+              detailLabel="Ver Detalhes Técnicos"
+              codeLabel="GitHub"
+              maxStackItems={5}
+            />
+          ))}
         </div>
       </section>
     </main>

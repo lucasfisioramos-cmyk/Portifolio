@@ -2,7 +2,7 @@ import ContactForm from '@/components/ContactForm'
 import { profile } from '@/lib/data'
 
 export const metadata = {
-  title: 'Contato | Lucas Dev',
+  title: 'Contato | Lucas Lemes Ramos',
 }
 
 export default function Contato() {
@@ -50,6 +50,7 @@ export default function Contato() {
               </a>
               <a
                 href={`mailto:${profile.email}`}
+                title={profile.email}
                 className="btn btn-outline-secondary"
                 style={{ justifyContent: 'flex-start' }}
               >

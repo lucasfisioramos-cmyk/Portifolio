@@ -4,8 +4,9 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Lucas | Portfólio Dev',
-  description: 'Desenvolvedor Full Stack em Formação — Python, Flask, SQL, Docker, Git',
+  title: 'Lucas Lemes Ramos | Portfólio Dev',
+  description:
+    'Desenvolvedor Full Stack em Formação (DSM — FATEC São José dos Campos) — Backend, APIs REST/RESTful, TypeScript, Node.js, Python, React, Next.js e Bancos de Dados.',
 }
 
 export default function RootLayout({

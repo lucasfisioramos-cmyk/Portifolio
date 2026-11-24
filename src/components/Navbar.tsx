@@ -14,12 +14,20 @@ export default function Navbar() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
 
+  const normalizedPath =
+    pathname && pathname !== '/' ? pathname.replace(/\/+$/, '') : '/'
+
+  const isLinkActive = (href: string) => {
+    if (href === '/') return normalizedPath === '/'
+    return normalizedPath === href || normalizedPath.startsWith(`${href}/`)
+  }
+
   return (
     <header>
       <nav className="custom-navbar">
         <div className="container">
           <div className="navbar-inner">
-            <Link href="/" className="navbar-brand">
+            <Link href="/" className="navbar-brand" onClick={() => setOpen(false)}>
               <span className="accent">&lt;</span>Lucas<span className="accent">Dev/&gt;</span>
             </Link>
 
@@ -27,6 +35,7 @@ export default function Navbar() {
               className="nav-toggle"
               onClick={() => setOpen(!open)}
               aria-label="Abrir menu"
+              aria-expanded={open}
             >
               <span />
               <span />
@@ -38,7 +47,7 @@ export default function Navbar() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className={`custom-link${pathname === link.href ? ' active' : ''}`}
+                    className={`custom-link${isLinkActive(link.href) ? ' active' : ''}`}
                     onClick={() => setOpen(false)}
                   >
                     {link.label}

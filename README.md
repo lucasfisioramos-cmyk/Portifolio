@@ -39,7 +39,7 @@ Portfólio pessoal e acadêmico desenvolvido com **Next.js (App Router)**, **Rea
 
 ### Projetos Profissionais
 
-- Em transição de carreira da área clínica (Fisioterapia, 2015–2025) para Tecnologia, buscando a primeira oportunidade de estágio ou atuação profissional em Desenvolvimento de Software.
+- Em transição de carreira da área clínica (Fisioterapia, 2014–2025) para Tecnologia, buscando a primeira oportunidade de estágio ou atuação profissional em Desenvolvimento de Software.
 
 ### Projetos Pessoais
 
@@ -56,34 +56,6 @@ Portfólio pessoal e acadêmico desenvolvido com **Next.js (App Router)**, **Rea
 - **Estilização & Ícones:** CSS puro em `src/app/globals.css` (sem frameworks externos) e `bootstrap-icons` via CDN
 - **Dados centralizados:** `src/lib/data.ts` (tipagem estrita e helper `imagePath()` com `NEXT_PUBLIC_BASE_PATH`)
 - **Deploy automatizado:** GitHub Actions (`.github/workflows/deploy.yaml`) publicando a pasta estática `out/` no GitHub Pages com `GITHUB_PAGES=true`, `basePath: '/Portifolio'`, `trailingSlash: true` e `out/.nojekyll`
-
----
-
-## Como Executar Localmente
-
-```bash
-# Instalar dependências
-npm install
-
-# Rodar servidor de desenvolvimento
-npm run dev
-```
-
-### Gerar Exportação Estática (`out/`)
-
-```bash
-# Build padrão (raiz '/')
-npm run build
-
-# Build simulando o subpath '/Portifolio' do GitHub Pages (Linux/macOS)
-GITHUB_PAGES=true npm run build
-```
-
-No Windows (PowerShell):
-
-```powershell
-$env:GITHUB_PAGES='true'; npm run build
-```
 
 ---
 

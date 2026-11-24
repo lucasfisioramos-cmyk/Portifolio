@@ -58,20 +58,24 @@ export interface Skill {
   desc: string
 }
 
+export interface EventImage {
+  src: string
+  alt: string
+}
+
 export interface EventRecord {
   id: string
   title: string
   dateOrLocation: string
   description: string
-  image: string | null
-  imageAlt: string
+  images: EventImage[]
 }
 
 export interface ProjectSlide {
   src: string
   alt: string
-  title: string
-  caption: string
+  title?: string
+  caption?: string
 }
 
 export type ProjectCategory = 'academico' | 'pessoal'
@@ -237,16 +241,14 @@ export const events: EventRecord[] = [
     title: 'Feira de Soluções da FATEC',
     dateOrLocation: '25/06/2026',
     description: 'Apresentação do projeto acadêmico Radar Cidadão.',
-    image: null,
-    imageAlt: 'Feira de Soluções da FATEC — apresentação do projeto Radar Cidadão',
+    images: [],
   },
   {
     id: 'maratona-programacao-fatec',
     title: 'Maratona de Programação da FATEC SJC (Fase Interna)',
     dateOrLocation: 'FATEC São José dos Campos',
     description: 'Participação na fase interna da Maratona de Programação da FATEC SJC.',
-    image: null,
-    imageAlt: 'Maratona de Programação da FATEC SJC (Fase Interna)',
+    images: [],
   },
   {
     id: 'innovation-week-2026',
@@ -254,8 +256,32 @@ export const events: EventRecord[] = [
     dateOrLocation: '25 a 27/08/2026 — Parque de Inovação Tecnológica São José dos Campos (PIT)',
     description:
       'Participação no evento de inovação e tecnologia no Parque de Inovação Tecnológica de São José dos Campos.',
-    image: null,
-    imageAlt: 'Innovation Week 2026 no PIT São José dos Campos',
+    images: [
+      {
+        src: imagePath('/imagens/evento-innovation-week-1.jpg'),
+        alt: 'Innovation Week 2026 em São José dos Campos — foto 1',
+      },
+      {
+        src: imagePath('/imagens/evento-innovation-week-2.jpg'),
+        alt: 'Innovation Week 2026 em São José dos Campos — foto 2',
+      },
+      {
+        src: imagePath('/imagens/evento-innovation-week-3.jpg'),
+        alt: 'Innovation Week 2026 em São José dos Campos — foto 3',
+      },
+      {
+        src: imagePath('/imagens/evento-innovation-week-4.jpg'),
+        alt: 'Innovation Week 2026 em São José dos Campos — foto 4',
+      },
+      {
+        src: imagePath('/imagens/evento-innovation-week-5.jpg'),
+        alt: 'Innovation Week 2026 em São José dos Campos — foto 5',
+      },
+      {
+        src: imagePath('/imagens/evento-innovation-week-6.jpg'),
+        alt: 'Innovation Week 2026 em São José dos Campos — foto 6',
+      },
+    ],
   },
   {
     id: 'seminario-konatus',
@@ -264,8 +290,20 @@ export const events: EventRecord[] = [
       'Tema: IA e Gêmeos Digitais aplicados ao desenvolvimento e certificação de sistemas críticos',
     description:
       'Participação em seminário técnico promovido pela empresa Konatus sobre inteligência artificial e gêmeos digitais em sistemas críticos.',
-    image: null,
-    imageAlt: 'Seminário da Empresa Konatus sobre IA e Gêmeos Digitais',
+    images: [
+      {
+        src: imagePath('/imagens/evento-konatus-1.jpg'),
+        alt: 'Seminário da Empresa Konatus sobre IA e Gêmeos Digitais — foto 1',
+      },
+      {
+        src: imagePath('/imagens/evento-konatus-2.jpg'),
+        alt: 'Seminário da Empresa Konatus sobre IA e Gêmeos Digitais — foto 2',
+      },
+      {
+        src: imagePath('/imagens/evento-konatus-3.jpg'),
+        alt: 'Seminário da Empresa Konatus sobre IA e Gêmeos Digitais — foto 3',
+      },
+    ],
   },
 ]
 
@@ -311,6 +349,99 @@ export const fisiocontrolSlides: ProjectSlide[] = [
     alt: 'Formulário Financeiro',
     title: 'Registro Financeiro',
     caption: 'Formulário para lançamento de receitas e despesas.',
+  },
+]
+
+export const logisticaReversaSlides: ProjectSlide[] = [
+  {
+    src: imagePath('/imagens/av3-swagger-1.png'),
+    alt: 'Greencode API 2.1.0 (OAS 3.0) no Fastify Swagger — Sistema e Autenticação',
+  },
+  {
+    src: imagePath('/imagens/av3-swagger-2.png'),
+    alt: 'Documentação Swagger — Endpoints de Organizações e Contratos',
+  },
+  {
+    src: imagePath('/imagens/av3-swagger-3.png'),
+    alt: 'Documentação Swagger — Endpoints de Contratos e Renovação',
+  },
+  {
+    src: imagePath('/imagens/av3-swagger-4.png'),
+    alt: 'Documentação Swagger — Endpoints de Lotes e Ciclo de Vida',
+  },
+  {
+    src: imagePath('/imagens/av3-swagger-5.jpg'),
+    alt: 'Documentação Swagger — Endpoints de Equipamentos e Rastreamento',
+  },
+  {
+    src: imagePath('/imagens/av3-swagger-6.png'),
+    alt: 'Documentação Swagger — Endpoints de Relatórios e Usuários',
+  },
+  {
+    src: imagePath('/imagens/av3-swagger-7.jpg'),
+    alt: 'Documentação Swagger — API Keys, Rastreabilidade B2B, Analytics e Relatórios Assíncronos',
+  },
+]
+
+export const zipCodersSlides: ProjectSlide[] = [
+  {
+    src: imagePath('/imagens/zip-coders-1-kanban.jpg'),
+    alt: 'Sistema de Ordens de Serviço Zip Coders — Quadro Kanban',
+  },
+  {
+    src: imagePath('/imagens/zip-coders-2-relatorios.jpg'),
+    alt: 'Sistema de Ordens de Serviço Zip Coders — Relatórios e Histórico',
+  },
+  {
+    src: imagePath('/imagens/zip-coders-3-usuarios.jpg'),
+    alt: 'Sistema de Ordens de Serviço Zip Coders — Gerenciamento de Usuários',
+  },
+  {
+    src: imagePath('/imagens/zip-coders-4-login.jpg'),
+    alt: 'Sistema de Ordens de Serviço Zip Coders — Tela de Login',
+  },
+]
+
+export const autofixSlides: ProjectSlide[] = [
+  {
+    src: imagePath('/imagens/autofix-1-dashboard.png'),
+    alt: 'AutoFix Pro — Dashboard Financeiro e Operacional',
+  },
+  {
+    src: imagePath('/imagens/autofix-2-servicos.jpg'),
+    alt: 'AutoFix Pro — Ordens de Serviço e Vistoria de Entrada',
+  },
+  {
+    src: imagePath('/imagens/autofix-3-orcamentos.png'),
+    alt: 'AutoFix Pro — Orçamentos de Clientes',
+  },
+  {
+    src: imagePath('/imagens/autofix-4-clientes.png'),
+    alt: 'AutoFix Pro — Cadastro de Clientes e Veículos',
+  },
+  {
+    src: imagePath('/imagens/autofix-5-equipe.png'),
+    alt: 'AutoFix Pro — Gestão de Equipe, Salários e Comissões',
+  },
+  {
+    src: imagePath('/imagens/autofix-6-contas.png'),
+    alt: 'AutoFix Pro — Contas Mensais da Oficina',
+  },
+  {
+    src: imagePath('/imagens/autofix-7-folha.png'),
+    alt: 'AutoFix Pro — Folha de Pagamento Anual',
+  },
+  {
+    src: imagePath('/imagens/autofix-8-perfil.png'),
+    alt: 'AutoFix Pro — Meu Perfil e Alteração de Senha',
+  },
+  {
+    src: imagePath('/imagens/autofix-9-configuracoes.png'),
+    alt: 'AutoFix Pro — Configurações da Oficina',
+  },
+  {
+    src: imagePath('/imagens/autofix-10-login.png'),
+    alt: 'AutoFix Pro — Tela de Login',
   },
 ]
 
@@ -395,9 +526,9 @@ export const projects: Project[] = [
       'Cucumber.js',
       'Docker',
     ],
+    coverImage: imagePath('/imagens/zip-coders-1-kanban.jpg'),
     coverIcon: 'bi-kanban',
-    mediaNote:
-      'Sem capturas de tela anexadas até o momento — resumo arquitetural completo disponível nesta página e código-fonte no repositório.',
+    slides: zipCodersSlides,
     repoUrl: 'https://github.com/lucasfisioramos-cmyk/Zip-Coders',
   },
   {
@@ -436,9 +567,9 @@ export const projects: Project[] = [
       'Docker',
       'GitHub Actions',
     ],
+    coverImage: imagePath('/imagens/av3-swagger-1.png'),
     coverIcon: 'bi-cpu',
-    mediaNote:
-      'Projeto backend/API modular sem interface gráfica anexada — arquitetura, testes e especificação disponíveis no repositório.',
+    slides: logisticaReversaSlides,
     repoUrl: 'https://github.com/lucasfisioramos-cmyk/AV3',
   },
   {
@@ -576,9 +707,9 @@ export const projects: Project[] = [
       'recharts',
       'jsPDF',
     ],
+    coverImage: imagePath('/imagens/autofix-1-dashboard.png'),
     coverIcon: 'bi-wrench-adjustable-circle',
-    mediaNote:
-      'Sem capturas de tela anexadas até o momento — código-fonte completo disponível no repositório.',
+    slides: autofixSlides,
     repoUrl: 'https://github.com/lucasfisioramos-cmyk/AutoFix-Pro---Gestao-de-Oficina',
   },
 ]

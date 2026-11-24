@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import Carousel from '@/components/Carousel'
 import { events, languages, profile, skills, timeline } from '@/lib/data'
 
 export const metadata = {
@@ -146,12 +147,14 @@ export default function Sobre() {
           <div className="cards-grid-2">
             {events.map((event) => (
               <article key={event.id} className="custom-card event-card">
-                {event.image ? (
+                {event.images.length > 1 ? (
+                  <Carousel slides={event.images} variant="card" />
+                ) : event.images.length === 1 ? (
                   <Image
-                    src={event.image}
-                    alt={event.imageAlt}
+                    src={event.images[0].src}
+                    alt={event.images[0].alt}
                     width={540}
-                    height={220}
+                    height={250}
                     className="card-img"
                   />
                 ) : (

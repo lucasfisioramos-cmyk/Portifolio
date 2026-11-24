@@ -865,3 +865,13 @@ textarea.form-control {
   white-space: normal;
   text-align: left;
 }
+
+.carousel-wrapper-card {
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.carousel-wrapper-card .carousel-slide img {
+  height: 250px;
+}
